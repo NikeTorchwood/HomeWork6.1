@@ -29,14 +29,14 @@
             EquatorLength = 38025,
             PreviousPlanet = mars
         };
-        PrintPlanet(venus,earth,mars,venus2);
+        PrintPlanet(venus, venus,earth,mars,venus2);
     }
 
-    private static void PrintPlanet(params object[] obj)
+    private static void PrintPlanet(object venus, params object[] obj)
     {
         foreach (object item in obj)
         {
-            Console.WriteLine(item);
+            Console.WriteLine(item + item.Equals(venus).ToString());
         }
     }
 }
